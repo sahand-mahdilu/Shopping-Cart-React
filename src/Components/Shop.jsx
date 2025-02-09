@@ -5,6 +5,12 @@ export default function Shop() {
     <div>
 
         <Header/>
+
+        <div className="product_container">
+
+
+            
+        </div>
     </div>
   )
 }
