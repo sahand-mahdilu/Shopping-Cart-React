@@ -1,3 +1,4 @@
+import Cart from "./Cart";
 import Header from "./Header";
 import Product from "./Product";
 
@@ -32,9 +33,14 @@ export default function Shop() {
             <hr  />
             <div className="cart_container">
 
-               
+               <Cart/>
+               <Cart/>
+               <Cart/>
             </div>
-           
+
+           <div className=" ">
+                <button className=" my-10 mx-auto block bg-blue-500 p-2 rounded-lg hover:bg-blue-400 ">Empty Cart</button>
+           </div>
         </section>
     </div>
   )
