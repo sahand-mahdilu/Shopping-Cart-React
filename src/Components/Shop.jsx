@@ -20,7 +20,6 @@ export default function Shop() {
   const addToCart= (productID)=>{
 
 
-        console.log(productID);
         let selectedProduct= products.find(product=>{
 
           return product.id===productID
@@ -72,11 +71,12 @@ export default function Shop() {
             <hr  />
             <div className="cart_container">
 
-              {cart.}
+              {cart.map(product=>{
 
-               <Cart/>
-               <Cart/>
-               <Cart/>
+               return <Cart key={product.id} {...product}/>
+
+              })}
+
             </div>
 
            <div className=" ">
