@@ -38,6 +38,12 @@ export default function Shop() {
 
   }
 
+  const emptyCart = ()=>{
+
+    setCart([])
+
+  }
+
   return (
     <div>
       <Header />
@@ -66,7 +72,7 @@ export default function Shop() {
         </div>
 
         <div className=" ">
-          <button className=" my-10 mx-auto block bg-blue-500 p-2 rounded-lg hover:bg-blue-400 ">
+          <button onClick={()=>{emptyCart()}} className=" my-10 mx-auto block bg-blue-500 p-2 rounded-lg hover:bg-blue-400 ">
             Empty Cart
           </button>
         </div>
