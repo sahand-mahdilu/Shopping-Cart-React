@@ -20,10 +20,26 @@ export default function Shop() {
       return product.id === productID;
     });
 
-    setCart((prev) => {
-      return [...prev, selectedProduct];
-    });
-  };
+     let productIncart= cart.find(product=>{
+
+      return  product.id===productID
+
+
+   
+
+
+    })
+
+    if(!productIncart){
+
+      setCart((prev) => {
+        return [...prev, selectedProduct];
+      });
+    
+
+    }
+
+   };
 
   const removeProduct= (productID)=>{
 
