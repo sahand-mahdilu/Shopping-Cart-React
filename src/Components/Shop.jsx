@@ -36,7 +36,6 @@ export default function Shop() {
   }
 
 
-  console.log(cart);
 
 
 
@@ -72,6 +71,8 @@ export default function Shop() {
             </div>
             <hr  />
             <div className="cart_container">
+
+              {cart.}
 
                <Cart/>
                <Cart/>
