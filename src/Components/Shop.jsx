@@ -1,8 +1,23 @@
+import { useState } from "react";
 import Cart from "./Cart";
 import Header from "./Header";
 import Product from "./Product";
 
 export default function Shop() {
+
+  const [products,setProducts]= useState([
+    {id:1,price:300,image:"./img/phone-1.jpg"},
+    {id:2,price:400,image:"./img/phone-2.jpg"},
+    {id:3,price:200,image:"./img/phone-3.jpg"},
+    {id:4,price:500,image:"./img/phone-4.png"},
+    {id:5,price:550,image:"./img/phone-5.png"},
+    {id:6,price:700,image:"./img/phone-6.webp"},
+  ])
+
+  console.log(products);
+
+
+
   return (
     <div>
 
@@ -10,12 +25,13 @@ export default function Shop() {
 
         <div className="product_container gap-5 grid grid-cols-3 justify-items-center mt-10 ">
 
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
+          {products.map(product=>{
+
+            return<Product key={product.id} {...product}/>
+
+          })}
+
+       
 
         </div>
 
