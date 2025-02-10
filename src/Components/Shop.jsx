@@ -14,7 +14,31 @@ export default function Shop() {
     {id:6,price:700,image:"./img/phone-6.webp"},
   ])
 
-  console.log(products);
+  const [cart,setCart]=useState([])
+
+
+  const addToCart= (productID)=>{
+
+
+        console.log(productID);
+        let selectedProduct= products.find(product=>{
+
+          return product.id===productID
+
+
+        })
+
+        
+        setCart(prev=>{
+          return[...prev,selectedProduct]
+        })
+
+  }
+
+
+  console.log(cart);
+
+
 
 
 
@@ -27,7 +51,7 @@ export default function Shop() {
 
           {products.map(product=>{
 
-            return<Product key={product.id} {...product}/>
+            return<Product key={product.id} {...product} addProduct={addToCart}/>
 
           })}
 
